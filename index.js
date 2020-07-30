@@ -1,13 +1,12 @@
 
-// http://newsapi.org/v2/top-headlines?country=in&apiKey=0405c8548bd94c11827a907f05d7f3d8
 console.log("This is my Daily News Update");
 
 let source="the-times-of-india";
-let apiKey='0405c8548bd94c11827a907f05d7f3d8';;
+let apiKey='your_apiKey';;
 let newsAccordion=document.getElementById('newsAccordion');
 
 const xhr=new XMLHttpRequest();
-xhr.open('GET',`https://newsapi.org/v2/sources?apiKey=3d48c7b416bb477da3a550259466d642`,true);
+xhr.open('GET',`https://newsapi.org/v2/sources?apiKey=your_apiKey`,true);
 xhr.onload=function() {
     if (this.status==200) {
         let json=JSON.parse(this.responseText);
